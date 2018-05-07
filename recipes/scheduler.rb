@@ -21,6 +21,14 @@ end
 
 Chef::Log.info('*********** Docker cleaned, pulling and running ****************')
 
+bash "docker-login" do
+    user "root"
+    returns [0, 1]
+    code <<-EOH
+        docker login -u vouchdocker -p 123dockerhub456
+    EOH
+end
+
 bash "docker-run" do
     user "root"
     returns [0, 1]
