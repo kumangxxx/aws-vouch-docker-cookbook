@@ -1,3 +1,5 @@
+include_recipe "deploy"
+
 Chef::Log.info("***************** Deploying ***************")
 
 node[:deploy].each do |application, deploy|
