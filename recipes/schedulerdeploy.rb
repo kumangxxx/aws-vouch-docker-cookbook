@@ -3,7 +3,7 @@ bash "docker-cleanup" do
     user "root"
     returns [0, 1, 2]
     code <<-EOH
-        docker stop scheduler1 && docker rm scheduler1
+        docker stop schedule1 && docker rm schedule1
     EOH
 end
 
