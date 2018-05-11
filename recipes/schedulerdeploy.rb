@@ -29,7 +29,7 @@ bash "docker-run" do
     user "root"
     returns [0, 1, 2, 125]
     code <<-EOH
-        docker run --name schedule1 -p 6001:8001 -e ENV=_PRODUCTION -e SERVICE_NAME=scheduler_1 -e REDIS_HOST=scheduler-redis.2kk9v8.ng.0001.apse1.cache.amazonaws.com:6379 --restart always vouchdocker/schedule-service:0.2.12
+        docker run --name schedule1 -p 6001:8001 -e ENV=_PRODUCTION -e SERVICE_NAME=scheduler_1 -e REDIS_HOST=scheduler-redis.2kk9v8.ng.0001.apse1.cache.amazonaws.com:6379 --restart always vouchdocker/schedule-service:0.2.13
     EOH
 end
 
