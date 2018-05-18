@@ -1,4 +1,4 @@
-cookbook_file "/tmp/deploydocker.sh" do
+cookbook_file "/tmp/deploydockerstaging.sh" do
     source "deploydockerstaging.sh"
     mode 0755
   end
