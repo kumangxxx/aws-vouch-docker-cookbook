@@ -1,0 +1,5 @@
+#!/bin/sh
+
+<% node[:deploy]['vouch_server'][:environment_variables].each do |name,value| -%>
+export <%= name %>=<%= value %>
+<% end -%>
