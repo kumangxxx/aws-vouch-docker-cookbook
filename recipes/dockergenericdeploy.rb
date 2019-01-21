@@ -1,5 +1,5 @@
 Chef::Log.info("Setting environment variables")
-Chef::Log.info("Node #{ node }")
+Chef::Log.info("Node #{ node } | deploy #{ node[:deploy] }")
 
 Chef::Log.info("Setting environment variables for current process  #{ node[:deploy] }")
 node[:deploy]['vouch_server'][:environment_variables].each do |name, value|
