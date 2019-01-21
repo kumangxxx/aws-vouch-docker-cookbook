@@ -1,3 +1,5 @@
+include_recipe 'deploy'
+
 Chef::Log.info("Setting environment variables")
 Chef::Log.info("Node #{ node } | deploy #{ node[:deploy] }")
 
