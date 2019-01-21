@@ -4,15 +4,15 @@ Chef::Log.info("Node #{ node } | deploy #{ node[:deploy] }")
 if node[:deploy] === nil
 
 	Chef::Log.info("No deployment..")
-	# Chef::Log.info("docker-env-test1 #{ node["docker-env-test1"] }")
-	# node.each do |name, value|
-	# 	Chef::Log.info("name -#{ name }-")		
-	# 	Chef::Log.info("value -#{ value }-")		
+	Chef::Log.info("docker-env-test1 #{ node["docker-env-test1"] }")
+	node.each do |name, value|
+		Chef::Log.info("name -#{ name }-")		
+		Chef::Log.info("value -#{ value }-")		
 		
-	# end
-	node[:deploy].each do |app, deploy|
-		Chef::Log.info("hmm -#{ app }-")
 	end
+	# node[:deploy].each do |app, deploy|
+	# 	Chef::Log.info("hmm -#{ app }-")
+	# end
 
 	Chef::Log.info("ENV -#{ ENV }-")
 
