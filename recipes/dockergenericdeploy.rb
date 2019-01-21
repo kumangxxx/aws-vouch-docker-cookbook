@@ -10,6 +10,9 @@ if node[:deploy] === nil
 	# 	Chef::Log.info("value -#{ value }-")		
 		
 	# end
+	node[:deploy].each do |app, deploy|
+		Chef::Log.info("hmm -#{ app }-")
+	end
 
 	Chef::Log.info("ENV -#{ ENV }-")
 
