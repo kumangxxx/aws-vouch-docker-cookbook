@@ -4,6 +4,7 @@ Chef::Log.info("Node #{ node } | deploy #{ node[:deploy] }")
 if node[:deploy] === nil
 
 	Chef::Log.info("No deployment..")
+	Chef::Log.info("docker-env-test1 #{ node["docker-env-test1"] }")
 
 elsif
 
